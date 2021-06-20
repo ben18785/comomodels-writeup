@@ -34,6 +34,8 @@ These SEIR models form a foundation of many models used to represent the transmi
 \subsection{Models}
 ComoModels contains a series of deterministic ODE-based models of infection transmission dynamics. Here, we provide model equations for each of them.
 
+I think we may want an SIR model since these are also used in COVID-19 modelling. E.g. science paper. I think we'll also want a model that allows interventions including social distancing, elderly cocooning and vaccinations: these should probably be age-structured.
+
 \paragraph{Base SEIRD model}
 \begin{align}
 \frac{dS}{dt} &= - \beta S I\\
@@ -42,7 +44,6 @@ ComoModels contains a series of deterministic ODE-based models of infection tran
 \frac{dR}{dt} &= \gamma I\\
 \frac{dD}{dt} &= \mu I
 \end{align}
-
 
 \paragraph{Age-structured model.}
 
@@ -81,15 +82,14 @@ Teaching software engineering through collaborative software development: do we 
 
 
 \section{Results}
-Six key lessons in epidemiology:
+Key lessons in modelling of COVID-19:
+
 \begin{itemize}
 	\item What is an SEIRD model? Solveig / Ben
+	\item Age structured models and the influence of uncertainty in contact matrices on epidemic trajectories. Ioana / Richard
+	\item The influence of social distancing, targeted isolation and cocooning the elderly on transmission and deaths. Idil / Oscar?
 	\item The importance of sensitivity analyses in transmission dynamics modelling. Hui Ja / Chon
-	\subitem Optimise an SEIR model to a UK dataset. Show that multiple trajectories are compatible with disease trajectory.
-	\item Age structured models and the influence of uncertainty in contact matrices on epidemic trajectories. Ioana / Richard / Oscar
-	\item The impact of asymptomatic infection on transmission. Liangti
-	\item The difficulty in quantifying transmission vs vaccination. Ioana?
-	\item The impact of population replenishment of susceptibles on long-term re-occurrence. Idil
+	\subitem Optimise an SEIRD model to a UK dataset. Show that multiple trajectories are compatible with disease trajectory.
 \end{itemize}
 	
 
