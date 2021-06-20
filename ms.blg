@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ms.aux
+The style file: authordate1.bst
+Database file #1: covid.bib
+Warning--empty journal in ferguson2020report
+You've used 9 entries,
+            2441 wiz_defined-function locations,
+            628 strings with 6433 characters,
+and the built_in function-call counts, 4040 in all, are:
+= -- 353
+> -- 219
+< -- 30
++ -- 71
+- -- 67
+* -- 368
+:= -- 687
+add.period$ -- 36
+call.type$ -- 9
+change.case$ -- 56
+chr.to.int$ -- 9
+cite$ -- 10
+duplicate$ -- 140
+empty$ -- 272
+format.name$ -- 74
+if$ -- 800
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 10
+newline$ -- 48
+num.names$ -- 27
+pop$ -- 60
+preamble$ -- 1
+purify$ -- 65
+quote$ -- 0
+skip$ -- 140
+stack$ -- 0
+substring$ -- 244
+swap$ -- 29
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 68
+warning$ -- 1
+while$ -- 29
+width$ -- 0
+write$ -- 115
+(There was 1 warning)

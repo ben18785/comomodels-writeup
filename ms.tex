@@ -1,0 +1,101 @@
+\documentclass[]{article}
+
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+%opening
+\title{Learning transmission dynamics modelling of COVID-19 using ComoModels}
+
+\begin{document}
+	\maketitle
+
+\begin{abstract}
+The COVID-19 epidemic continues to rage in many parts of the world \citep{dong2020interactive}. In the UK alone, an array of mathematical models have played a prominent role in guiding policymaking, from compartmental models of disease transmission \citep{birrell2021real,danon2020spatial} to branching process models \citep{davies2020effects} to individual based models of transmission \citep{ferguson2020report}. Understanding these models requires considerable prerequisite knowledge and presents challenges to those new to the field of epidemiological modelling. In this paper, we introduce a student-led software project called ``ComoModels'', which provides an open-source R package with pedagogical material to enable understanding of some of the complex aspects of compartmental epidemiological models. We then use ComoModels to illustrate six key lessons in the transmission of COVID-19 within R Markdown vignettes.
+\end{abstract}
+
+\section{Introduction}
+Mathematical modelling of COVID-19 transmission has been a crucial determinant in policymaking during the pandemic. For example, in the UK, the release of a report by Imperial College London \citep{ferguson2020report} is widely believed to have been influential in the UK government's decision to institute a first lockdown on 23rd March. \textit{Compartmental models} of transmission dynamics (see, for example, \cite{anderson1992infectious,brauer2008compartmental}), in particular, have featured prominently. In these models, individual people are allocated to compartments which, amongst other things, indicate their disease state. A popular variant of compartmental models used during the pandemic include Susceptible-Exposed-Infectious-Recovered-Dead (SEIR) models, where individuals naive to infection are labelled \textit{susceptible} (S), individuals exposed to infection (who will go on to become infectious) are labelled \textit{exposed} (I); those exposed individuals then go on to become \textit{infectious} (I) and subsequently recover (R).
+
+These SEIR models form a foundation of many models used to represent the transmission dynamics of COVID-19. Here, we describe a few such modelling studies.  In \cite{danon2020spatial}, is a stochastic spatial metapopulation model of COVID-19 dynamics in the UK which includes SEIR compartments at its core. In addition, this model incorporates a mild symptom infectious compartment, population movements between electoral wards and investigates seasonality in transmission. \cite{birrell2021real} is a deterministic ordinary differential equation (ODE) based model with an SEIR base structure although extended to include two exposed and two infectious compartments. In addition, the model is structured by age, incorporating age-dependent contact structures which vary according to UK region which can change over time in line with published mobility data. An international consortium of modellers named the ``COVID-19 Modelling (CoMo) Consortium'' \citep{aguas2020modelling} use a deterministic ODE model structured by age, including, amongst other compartments, states representing severely infected individuals. This model inspired the development of our package, so we named ours ``ComoModels'' as a nod to it.
+
+
+
+\begin{itemize}
+	\item A summary of the COVID-19 models used in the UK. Focus on their components e.g. age-structured elements.
+	\item Capacity building. How in order to build capacity in LMICs we need pedagogical tools.
+	\item Software development. Mention Ferguson and the critique by \cite{horner2020software}. Emphasise the focus of this work on developing the software collaboratively via Github.
+	\item Existing pedagogical software
+\end{itemize}
+
+\section{Methods}
+\subsection{Models}
+ComoModels contains a series of deterministic ODE-based models of infection transmission dynamics. Here, we provide model equations for each of them.
+
+\paragraph{Base SEIRD model}
+\begin{align}
+\frac{dS}{dt} &= - \beta S I\\
+\frac{dE}{dt} &= \beta S I - \kappa E\\
+\frac{dI}{dt} &= \kappa E - (\gamma + \mu) I\\
+\frac{dR}{dt} &= \gamma I\\
+\frac{dD}{dt} &= \mu I
+\end{align}
+
+
+\paragraph{Age-structured model.}
+
+\begin{align}
+\frac{dS_i}{dt} &= - \beta S_i \sum_{j} C_{i,j} I_j\\
+\frac{dE_i}{dt} &= \beta S_i \sum_{j} C_{i,j} I_j - \kappa E_i\\
+\frac{dI_i}{dt} &= \kappa E_i - (\gamma + \mu_i) I_i\\
+\frac{dR_i}{dt} &= \gamma I_i\\
+\frac{dD_i}{dt} &= \mu_i I_i
+\end{align}
+
+\paragraph{Waning immunity model}
+\begin{align}
+\frac{dS}{dt} &= - \beta S I + \delta R\\
+\frac{dE}{dt} &= \beta S I - \kappa E\\
+\frac{dI}{dt} &= \kappa E - (\gamma + \mu) I\\
+\frac{dR}{dt} &= \gamma I - \delta R\\
+\frac{dD}{dt} &= \mu I
+\end{align}
+
+\paragraph{Model with natural births and deaths}
+\begin{align}
+\frac{dS}{dt} &= \Lambda - \beta S I - \nu S\\
+\frac{dE}{dt} &= \beta S I - (\kappa + \nu) E\\
+\frac{dI}{dt} &= \kappa E - (\gamma + \mu + \nu) I\\
+\frac{dR}{dt} &= \gamma I - (\delta + \nu) R\\
+\frac{dD}{dt} &= \mu I + \nu (S + E + I + R)
+\end{align}
+
+\subsection{Package structure}
+Mainly here just focus on how the model class works.
+
+\subsection{Software engineering approach}
+Unit testing, style checking.
+Teaching software engineering through collaborative software development: do we want to make this introspective? What skills did we all have before the project? What skills did we have afterwards?
+
+
+\section{Results}
+Six key lessons in epidemiology:
+\begin{itemize}
+	\item What is an SEIRD model? Solveig / Ben
+	\item The importance of sensitivity analyses in transmission dynamics modelling. Hui Ja / Chon
+	\subitem Optimise an SEIR model to a UK dataset. Show that multiple trajectories are compatible with disease trajectory.
+	\item Age structured models and the influence of uncertainty in contact matrices on epidemic trajectories. Ioana / Richard / Oscar
+	\item The impact of asymptomatic infection on transmission. Liangti
+	\item The difficulty in quantifying transmission vs vaccination. Ioana?
+	\item The impact of population replenishment of susceptibles on long-term re-occurrence. Idil
+\end{itemize}
+	
+
+
+\bibliographystyle{authordate1}
+\bibliography{covid}
+
+
+\end{document}

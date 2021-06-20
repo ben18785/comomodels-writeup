@@ -1,0 +1,67 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citename{Aguas {\em et~al.\ }\relax,
+  }2020]{aguas2020modelling}
+Aguas, Ricardo, White, Lisa, Hupert, Nathaniel, Shretta, Rima, Pan-Ngum,
+  Wirichada, Celhay, Olivier, Moldokmatova, Ainura, Arifi, Fatima, Mirzazadeh,
+  Ali, Sharifi, Hamid, {\em et~al.\ }\relax. 2020.
+\newblock Modelling the COVID-19 pandemic in context: an international
+  participatory approach.
+\newblock {\em BMJ global health}, {\bf 5}(12), e003126.
+
+\bibitem[\protect\citename{Anderson \& May, }1992]{anderson1992infectious}
+Anderson, Roy~M, \& May, Robert~M. 1992.
+\newblock {\em Infectious diseases of humans: dynamics and control}.
+\newblock Oxford university press.
+
+\bibitem[\protect\citename{Birrell {\em et~al.\ }\relax,
+  }2021]{birrell2021real}
+Birrell, Paul, Blake, Joshua, Van~Leeuwen, Edwin, Gent, Nick, \& De~Angelis,
+  Daniela. 2021.
+\newblock Real-time nowcasting and forecasting of COVID-19 dynamics in England:
+  the first wave.
+\newblock {\em Philosophical Transactions of the Royal Society B}, {\bf
+  376}(1829), 20200279.
+
+\bibitem[\protect\citename{Brauer, }2008]{brauer2008compartmental}
+Brauer, Fred. 2008.
+\newblock Compartmental models in epidemiology.
+\newblock {\em Pages  19--79 of:} {\em Mathematical epidemiology}.
+\newblock Springer.
+
+\bibitem[\protect\citename{Danon {\em et~al.\ }\relax, }2020]{danon2020spatial}
+Danon, Leon, Brooks-Pollock, Ellen, Bailey, Mick, \& Keeling, Matt~J. 2020.
+\newblock A spatial model of CoVID-19 transmission in England and Wales: early
+  spread and peak timing.
+\newblock {\em MedRxiv}.
+
+\bibitem[\protect\citename{Davies {\em et~al.\ }\relax,
+  }2020]{davies2020effects}
+Davies, Nicholas~G, Kucharski, Adam~J, Eggo, Rosalind~M, Gimma, Amy, Edmunds,
+  W~John, Jombart, Thibaut, O'Reilly, Kathleen, Endo, Akira, Hellewell, Joel,
+  Nightingale, Emily~S, {\em et~al.\ }\relax. 2020.
+\newblock Effects of non-pharmaceutical interventions on COVID-19 cases,
+  deaths, and demand for hospital services in the UK: a modelling study.
+\newblock {\em The Lancet Public Health}, {\bf 5}(7), e375--e385.
+
+\bibitem[\protect\citename{Dong {\em et~al.\ }\relax,
+  }2020]{dong2020interactive}
+Dong, Ensheng, Du, Hongru, \& Gardner, Lauren. 2020.
+\newblock An interactive web-based dashboard to track COVID-19 in real time.
+\newblock {\em The Lancet infectious diseases}, {\bf 20}(5), 533--534.
+
+\bibitem[\protect\citename{Ferguson {\em et~al.\ }\relax,
+  }2020]{ferguson2020report}
+Ferguson, Neil, Laydon, Daniel, Nedjati~Gilani, Gemma, Imai, Natsuko, Ainslie,
+  Kylie, Baguelin, Marc, Bhatia, Sangeeta, Boonyasiri, Adhiratha,
+  Cucunuba~Perez, ZULMA, Cuomo-Dannenburg, Gina, {\em et~al.\ }\relax. 2020.
+\newblock Report 9: Impact of non-pharmaceutical interventions (NPIs) to reduce
+  COVID19 mortality and healthcare demand.
+
+\bibitem[\protect\citename{Horner \& Symons, }2020]{horner2020software}
+Horner, Jack~K, \& Symons, John~F. 2020.
+\newblock Software engineering standards for epidemiological models.
+\newblock {\em History and philosophy of the life sciences}, {\bf 42}(4),
+  1--24.
+
+\end{thebibliography}
